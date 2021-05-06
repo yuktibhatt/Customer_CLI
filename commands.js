@@ -71,6 +71,17 @@ program
 
 
 
+program
+    .command('remove <_id>')
+    .alias('r')
+    .description('Remove a customer')
+    .action(_id => removeCustomer(_id));
 
+program
+    .command('list')
+    .alias('l')
+    .description('List customer')
+    .action(()=> listCustomer());
 
 program.parse(process.argv);
+
