@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const program = require('commander');
 const { prompt } = require('inquirer');
 const {
@@ -56,7 +57,7 @@ program
 });
 
 program
-.command('find <firstname>')
+.command('find <name>')
 .alias('f')
 .description('Find a customer')
 .action(name => findCustomer(name));
